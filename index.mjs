@@ -31,7 +31,13 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/\n\n+/g, "\n\n")
       .replace(/^(#INSTRUMENTAL\n*)+/g, "")
       .replace(/(\n*#INSTRUMENTAL)+$/g, "")
-      .trim() || (/instrumental/i.test(raw) ? "[Instrumental]" : "");
+      .trim().split("\n\n").map(s => {
+        const l = s.split("\n");
+        if (!/^#/.test(l[0]) || l.length <= 11) return s;
+        const out = [];
+        for (let i = 1; i < l.length; i += 10) out.push(l[0] + "\n" + l.slice(i, i + 10).join("\n"));
+        return out.join("\n\n");
+      }).join("\n\n") || (/instrumental/i.test(raw) ? "[Instrumental]" : "");
   } else if (style === "plain") {
     return raw
       .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")

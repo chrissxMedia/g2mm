@@ -86,3 +86,8 @@ expect(g2mm(`[Verse]\nI'm the f*** man`, "plain")).toBe(`I'm the **** man`);
 expect(g2mm(`[Verse]\nhello,\nworld.\nhow are you? i am fine\nwow! so cool`)).toBe(`#VERSE\nHello\nWorld\nHow are you? I am fine\nWow! So cool`);
 expect(g2mm(`[Verse]\nhello,\nworld.`, "plain")).toBe(`Hello\nWorld`);
 expect(g2mm(`[Verse]\nborn in the U.S.A.`)).toBe(`#VERSE\nBorn in the U.S.A.`);
+
+const longVerse = `[Verse 1]\n` + Array.from({ length: 12 }, (_, i) => `Line${i + 1}`).join("\n");
+expect(g2mm(longVerse)).toBe(`#VERSE\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n") + `\n\n#VERSE\nLine11\nLine12`);
+const tenVerse = `[Verse 1]\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n");
+expect(g2mm(tenVerse)).toBe(`#VERSE\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n"));
