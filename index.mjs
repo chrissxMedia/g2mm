@@ -24,6 +24,7 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/^\[[oO][uU][tT][rR][oO].*\]$/gm, "#OUTRO")
       .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
       .replace(/ ?\[\?\]/g, "")
+      .replace(/<\/?[ib][^>]*>/gi, "")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n")
       .replace(/^(#INSTRUMENTAL\n*)+/g, "")
@@ -33,6 +34,7 @@ export function g2mm(raw, style = "musixmatch") {
     return raw
       .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
       .replace(/ ?\[\?\]/g, "")
+      .replace(/<\/?[ib][^>]*>/gi, "")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else {

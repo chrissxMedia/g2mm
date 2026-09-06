@@ -69,3 +69,6 @@ expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`, "genius")).toBe(`hello [?]\nhe 
 expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`)).toBe(`hello\nhe llo\nworld`);
 expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`, "plain")).toBe(`hello\nhe llo\nworld`);
 expect(g2mm(`hello [?]`)).toBe(`hello`);
+
+expect(g2mm(`[Chorus]\n<i>I'll be there</i>\n<b>We gon' ride</b>`)).toBe(`#CHORUS\nI'll be there\nWe gon' ride`);
+expect(g2mm(`[Chorus]\n<i>I'll be there</i>\n<b>We gon' ride</b>`, "plain")).toBe(`I'll be there\nWe gon' ride`);
