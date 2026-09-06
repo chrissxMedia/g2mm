@@ -91,3 +91,6 @@ const longVerse = `[Verse 1]\n` + Array.from({ length: 12 }, (_, i) => `Line${i 
 expect(g2mm(longVerse)).toBe(`#VERSE\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n") + `\n\n#VERSE\nLine11\nLine12`);
 const tenVerse = `[Verse 1]\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n");
 expect(g2mm(tenVerse)).toBe(`#VERSE\n` + Array.from({ length: 10 }, (_, i) => `Line${i + 1}`).join("\n"));
+
+expect(g2mm(`[Verse 1]\nhello\n\n[Skit: Dave]\nYo, pass me keys\n\n[Chorus]\ntrap`, "plain")).toBe(`Hello\n\nTrap`);
+expect(g2mm(`[Verse 1]\nhello\n\n[Skit: Dave]\nYo, pass me keys\n\n[Chorus]\ntrap`)).toBe(`#VERSE\nHello\n\nYo, pass me keys\n\n#CHORUS\nTrap`);

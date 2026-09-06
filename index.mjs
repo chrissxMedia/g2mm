@@ -40,6 +40,7 @@ export function g2mm(raw, style = "musixmatch") {
       }).join("\n\n") || (/instrumental/i.test(raw) ? "[Instrumental]" : "");
   } else if (style === "plain") {
     return raw
+      .replace(/^\[skit[^\]]*\]\n(?:(?!^\[)[\s\S])*/gim, "")
       .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
       .replace(/ ?\[\?\]/g, "")
       .replace(/<\/?[ib][^>]*>/gi, "")
