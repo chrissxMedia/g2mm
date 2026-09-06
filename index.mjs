@@ -22,6 +22,8 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/^\[[cC][hH][oO][rR][uU][sS].*\]$/gm, "#CHORUS")
       .replace(/^\[[iI][nN][tT][rR][oO].*\]$/gm, "#INTRO")
       .replace(/^\[[oO][uU][tT][rR][oO].*\]$/gm, "#OUTRO")
+      .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
+      .replace(/ ?\[\?\]/g, "")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n")
       .replace(/^(#INSTRUMENTAL\n*)+/g, "")
@@ -29,6 +31,8 @@ export function g2mm(raw, style = "musixmatch") {
       .trim() || (/instrumental/i.test(raw) ? "[Instrumental]" : "");
   } else if (style === "plain") {
     return raw
+      .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
+      .replace(/ ?\[\?\]/g, "")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else {

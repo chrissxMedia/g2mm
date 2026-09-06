@@ -64,3 +64,8 @@ expect(g2mm(`[Verse 1]\nhello\n\n[Instrumental]\n\n[Chorus]\nworld`, "plain")).t
 expect(g2mm(`[Instrumental]\nhello`)).toBe(`hello`);
 expect(g2mm(`hello\n\n[Instrumental]`)).toBe(`hello`);
 expect(g2mm("[Instrumental]\n")).not.toBe("");
+
+expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`, "genius")).toBe(`hello [?]\nhe [?] llo\n[?]\nworld`);
+expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`)).toBe(`hello\nhe llo\nworld`);
+expect(g2mm(`hello [?]\nhe [?] llo\n[?]\nworld`, "plain")).toBe(`hello\nhe llo\nworld`);
+expect(g2mm(`hello [?]`)).toBe(`hello`);
