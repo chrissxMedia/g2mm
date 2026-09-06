@@ -76,3 +76,6 @@ expect(g2mm(`[Chorus]\n<i>I'll be there</i>\n<b>We gon' ride</b>`, "plain")).toB
 expect(g2mm(`[Verse]\nHello\n*phone ringing*\nWorld`)).toBe(`#VERSE\nHello\nWorld`);
 expect(g2mm(`[Verse]\nHello\n*phone ringing*\nWorld`, "plain")).toBe(`Hello\nWorld`);
 expect(g2mm(`[Verse]\nHello\n*phone ringing*\nWorld`, "genius")).toBe(`[Verse]\nHello\n*phone ringing*\nWorld`);
+
+expect(g2mm(`[Verse]\nHold on (Yeah)\nStay with me (I)\nOh no (oh! Yeah)`)).toBe(`#VERSE\nHold on (yeah)\nStay with me (I)\nOh no (oh! Yeah)`);
+expect(g2mm(`[Verse]\nHold on (Yeah)`, "plain")).toBe(`Hold on (Yeah)`);
