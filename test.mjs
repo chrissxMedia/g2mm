@@ -48,3 +48,8 @@ hi too`;
 
 expect(g2mm(genius)).toBe(musixmatch);
 expect(g2mm(genius, "plain")).toBe(plain);
+
+expect(g2mm("a\r\nb\r\nc", "genius")).toBe("a\nb\nc");
+expect(g2mm("I love this chorus [chorus reprise]\nhello")).toBe("I love this chorus [chorus reprise]\nhello");
+expect(g2mm("[Chorus]\nhello")).toBe("#CHORUS\nhello");
+expect(g2mm("[Instrumental]\n")).toBe(g2mm("[Instrumental]"));

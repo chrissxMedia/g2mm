@@ -1,7 +1,7 @@
 export function g2mm(raw, style = "musixmatch") {
   if (!raw) return raw;
   raw = raw
-    .replace(/\r\n?/, "\n")
+    .replace(/\r\n?/g, "\n")
     .replace(/ +/g, " ")
     .replace(/\n /g, "\n")
     .replace(/ $/, "");
@@ -12,17 +12,17 @@ export function g2mm(raw, style = "musixmatch") {
     // TODO: remove punctuation at end of line but not ! and ?
     // TODO: consider processing line-by-line
     return raw
-      .replace(/\[([pP][aA][rR][tT]|[vV][eE][rR][sS]).*\]/g, "#VERSE")
-      .replace(/\[[bB][rR][iI][dD][gG][eE].*\]/g, "#BRIDGE")
-      .replace(/\[[hH][oO][oO][kK].*\]/g, "#HOOK")
-      .replace(/\[[cC][hH][oO][rR][uU][sS].*\]/g, "#CHORUS")
-      .replace(/\[[iI][nN][tT][rR][oO].*\]/g, "#INTRO")
-      .replace(/\[[oO][uU][tT][rR][oO].*\]/g, "#OUTRO")
-      .replace(/\[.*\]\n/g, "")
+      .replace(/^\[([pP][aA][rR][tT]|[vV][eE][rR][sS]).*\]$/gm, "#VERSE")
+      .replace(/^\[[bB][rR][iI][dD][gG][eE].*\]$/gm, "#BRIDGE")
+      .replace(/^\[[hH][oO][oO][kK].*\]$/gm, "#HOOK")
+      .replace(/^\[[cC][hH][oO][rR][uU][sS].*\]$/gm, "#CHORUS")
+      .replace(/^\[[iI][nN][tT][rR][oO].*\]$/gm, "#INTRO")
+      .replace(/^\[[oO][uU][tT][rR][oO].*\]$/gm, "#OUTRO")
+      .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else if (style === "plain") {
     return raw
-      .replace(/\[.*\]\n/g, "")
+      .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else {
     throw "not implemented (invalid style)";
