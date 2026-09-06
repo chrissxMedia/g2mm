@@ -8,9 +8,6 @@ export function g2mm(raw, style = "musixmatch") {
   if (style === "genius") {
     return raw.replace(/\n\n+/g, "\n\n").trim();
   } else if (style === "musixmatch") {
-    // TODO: capitalization
-    // TODO: remove punctuation at end of line but not ! and ?
-    // TODO: consider processing line-by-line
     return raw
       .replace(/^\[pre-chorus.*\]$/gmi, "#PRE-CHORUS")
       .replace(/^\[(refrain|post-chorus).*\]$/gmi, "#CHORUS")
@@ -28,6 +25,8 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/^\*[^*\n]+\*\s*\n?/gm, "")
       .replace(/\(([A-Z])/g, (m, c) => "(" + (c === "I" ? c : c.toLowerCase()))
       .replace(/\b(\w)\*+/g, "$1-")
+      .replace(/[,;:]+$|(?<!\w\.\w)\.+$/gm, "")
+      .replace(/(^|[?!]\s+)(\w)/gm, (_, p, c) => p + c.toUpperCase())
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n")
       .replace(/^(#INSTRUMENTAL\n*)+/g, "")
@@ -40,6 +39,8 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/<\/?[ib][^>]*>/gi, "")
       .replace(/^\*[^*\n]+\*\s*\n?/gm, "")
       .replace(/\b\w*\*+\w*/g, "****")
+      .replace(/[,;:]+$|(?<!\w\.\w)\.+$/gm, "")
+      .replace(/(^|[?!]\s+)(\w)/gm, (_, p, c) => p + c.toUpperCase())
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else {
