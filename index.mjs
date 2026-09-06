@@ -23,7 +23,10 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/^\[[iI][nN][tT][rR][oO].*\]$/gm, "#INTRO")
       .replace(/^\[[oO][uU][tT][rR][oO].*\]$/gm, "#OUTRO")
       .replace(/^\[.*\]\n?/gm, "")
-      .replace(/\n\n+/g, "\n\n").trim();
+      .replace(/\n\n+/g, "\n\n")
+      .replace(/^(#INSTRUMENTAL\n*)+/g, "")
+      .replace(/(\n*#INSTRUMENTAL)+$/g, "")
+      .trim() || (/instrumental/i.test(raw) ? "[Instrumental]" : "");
   } else if (style === "plain") {
     return raw
       .replace(/^\[.*\]\n?/gm, "")

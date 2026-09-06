@@ -58,3 +58,9 @@ expect(g2mm(`[Verse]\nhello\n\n[Pre-Chorus]\npre lyrics\n\n[Chorus]\nchorus lyri
 expect(g2mm(`[Verse]\nhello\n\n[Pre-Chorus]\npre lyrics\n\n[Chorus]\nchorus lyrics`, "plain")).toBe(`hello\n\npre lyrics\n\nchorus lyrics`);
 expect(g2mm(`[Refrain]\na\n\n[Post-Chorus]\nb\n\n[Breakdown]\nc\n\n[Interlude]\nd`)).toBe(`#CHORUS\na\n\n#CHORUS\nb\n\n#BRIDGE\nc\n\n#BRIDGE\nd`);
 expect(g2mm(`[Skit: Dave]\nYo, pass me keys`)).toBe(`Yo, pass me keys`);
+
+expect(g2mm(`[Verse 1]\nhello\n\n[Instrumental]\n\n[Chorus]\nworld`)).toBe(`#VERSE\nhello\n\n#INSTRUMENTAL\n\n#CHORUS\nworld`);
+expect(g2mm(`[Verse 1]\nhello\n\n[Instrumental]\n\n[Chorus]\nworld`, "plain")).toBe(`hello\n\nworld`);
+expect(g2mm(`[Instrumental]\nhello`)).toBe(`hello`);
+expect(g2mm(`hello\n\n[Instrumental]`)).toBe(`hello`);
+expect(g2mm("[Instrumental]\n")).not.toBe("");
