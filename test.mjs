@@ -94,3 +94,6 @@ expect(g2mm(tenVerse)).toBe(`#VERSE\n` + Array.from({ length: 10 }, (_, i) => `L
 
 expect(g2mm(`[Verse 1]\nhello\n\n[Skit: Dave]\nYo, pass me keys\n\n[Chorus]\ntrap`, "plain")).toBe(`Hello\n\nTrap`);
 expect(g2mm(`[Verse 1]\nhello\n\n[Skit: Dave]\nYo, pass me keys\n\n[Chorus]\ntrap`)).toBe(`#VERSE\nHello\n\nYo, pass me keys\n\n#CHORUS\nTrap`);
+
+expect(g2mm(`[Verse]\nOoh, I love you\nShoo-bee-doo-wop ba-da yeah\nStay with me`, "plain")).toBe(`Ooh, I love you\nStay with me`);
+expect(g2mm(`[Verse]\nOoh, I love you\nShoo-bee-doo-wop ba-da yeah\nStay with me`)).toBe(`#VERSE\nOoh, I love you\nShoo-bee-doo-wop ba-da yeah\nStay with me`);

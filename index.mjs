@@ -41,6 +41,7 @@ export function g2mm(raw, style = "musixmatch") {
   } else if (style === "plain") {
     return raw
       .replace(/^\[skit[^\]]*\]\n(?:(?!^\[)[\s\S])*/gim, "")
+      .replace(/^(?=.*\b(shoo|bee|bop|doo|wop|ba-da|la-la|da-da|dee|dah|dit|skee|skibidi)\b)(?:[^a-z\n]*(?:ooh|ah|whoa|yeah|burr|skrrt|shoo|bee|bop|doo|wop|ba|da|la|dee|dah|dit|skee|wah|skibidi)[^a-z\n]*)+$\n?/gim, "")
       .replace(/^[ \t]*\[\?\][ \t]*\n?/gm, "")
       .replace(/ ?\[\?\]/g, "")
       .replace(/<\/?[ib][^>]*>/gi, "")
