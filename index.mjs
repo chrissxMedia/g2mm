@@ -27,6 +27,7 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/<\/?[ib][^>]*>/gi, "")
       .replace(/^\*[^*\n]+\*\s*\n?/gm, "")
       .replace(/\(([A-Z])/g, (m, c) => "(" + (c === "I" ? c : c.toLowerCase()))
+      .replace(/\b(\w)\*+/g, "$1-")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n")
       .replace(/^(#INSTRUMENTAL\n*)+/g, "")
@@ -38,6 +39,7 @@ export function g2mm(raw, style = "musixmatch") {
       .replace(/ ?\[\?\]/g, "")
       .replace(/<\/?[ib][^>]*>/gi, "")
       .replace(/^\*[^*\n]+\*\s*\n?/gm, "")
+      .replace(/\b\w*\*+\w*/g, "****")
       .replace(/^\[.*\]\n?/gm, "")
       .replace(/\n\n+/g, "\n\n").trim();
   } else {
