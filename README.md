@@ -23,3 +23,9 @@ import g2mm from "g2mm";
 const my_musixmatch_lyrics = g2mm(my_genius_lyrics);
 const my_plain_lyrics = g2mm(my_genius_lyrics, "plain");
 ```
+
+## Styles
+
+[`styles.md`](styles.md) is a condensed reference of the three lyric styles
+(Genius, Musixmatch, Plain/Apple Music) that this tool converts between,
+compiled from the official guidelines linked at the bottom.
