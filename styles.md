@@ -26,6 +26,8 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 ### Section headers
 
 - `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Refrain]`, `[Bridge]`, `[Breakdown]`, `[Post-Chorus]`, `[Outro]`, `[Interlude]`, `[Skit]`
+- `[Segue]` only for dialogue connecting distinct parts within a track. Instrumental sections can use `[Instrumental Break]` or a solo header such as `[Guitar Solo]`, `[Drum Solo]`, or `[Saxophone Solo]`; include any vocals under those headers.
+- `[Hook]` is obsolete; use `[Chorus]` or `[Refrain]` as appropriate.
 - Number verses in ascending order: `[Verse 1]`, `[Verse 2]`. A single verse, even if repeated, uses `[Verse]`.
 - Parts use ascending Roman numerals: `[Part I]`, `[Part II]`. Named parts use `[Part I: Name]`. Verse numbers continue across parts.
 - `[Instrumental Intro]` and `[Instrumental Outro]` may be used for passages with no lyrics or dialogue longer than roughly one minute. Omit these headers for shorter passages.
