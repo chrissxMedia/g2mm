@@ -16,6 +16,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 
 - Section header on its own line, in brackets.
 - Distinguish vocalists with `<i>...</i>` and `<b>...</b>`.
+- Do not add vocalist formatting when a section has more than four artist combinations.
 - Ad-libs / backing vocals in `(parentheses)` at the end of the line, capitalized.
 - Unknown lyric → `[?]`.
 - Censored words → asterisks.
