@@ -47,7 +47,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 - Punctuation: no trailing `,` or non-acronymized `.`. `?`/`!` in moderation. `…` / `-` only for interruptions and fade-outs.
 - Direct speech after a comma, capitalized: `She said, "Do it like this"`.
 - Background vocals in `(parentheses)`, lowercase unless a pronoun or after punctuation.
-- Standardized slang spellings: `Ballin'`, `'Cause`, `Cuz`, `'Em`, `Gon'`/`Gonna`, `I'ma`, `Outta`, `'Til`, `Yo`/`Yo'`.
+- Standardized slang spellings: `Ballin'`, `'Cause` for because, `Cuz` for cousin, `'Em`, `Gon'`/`Gonna`, `I'ma`, `Outta`, `'Til`, `Yo` for a greeting, `Yo'` for the possessive.
 
 ### Structure tags
 
