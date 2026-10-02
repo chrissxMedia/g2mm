@@ -4,7 +4,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 
 ## Common (all three)
 
-- Transcribe exactly as heard in the audio; include all sung vocal content.
+- Transcribe lyrics as heard in the audio, subject to each style's rules for vocal content.
 - One lyric per line – Lines within a section have no extra spacing between them.
 - Separate sections with a blank line.
 - Write out ALL repeated lines — never `(Repeat x3)` / `(X5)`.
