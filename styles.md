@@ -64,9 +64,9 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 - Censored/muffled words in audio: completely starred out (e.g. `I'm the **** man`).
 - Background vocals in parentheses, capitalized. Placement is unclear: `artists.apple.com` says end of the main line; `help.apple.com` Style Guide says on a separate line following the main vocal.
 - No sound effects.
-- Scatting/instrumental vocalizations: do not transcribe.
+- Improvised scatting: do not transcribe; Apple treats it as instrumental content.
 - Harmonious non-word vocals (`ooh`, `ah`, `whoa`, `burr`, `skrrt`): transcribe.
-- Improvised/instrumental-vocal non-word vocals: transcribe sparingly, only when narratively or stylistically significant (source: both clauses present; "must" vs "sparingly" in tension).
+- Non-word vocals generally: transcribe sparingly, only when narratively or stylistically significant.
 - Spoken word / conversational passages: omit.
 
 ## Sources
