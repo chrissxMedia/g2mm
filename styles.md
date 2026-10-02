@@ -28,7 +28,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 - `[Intro]`, `[Verse]`, `[Pre-Chorus]`, `[Chorus]`, `[Refrain]`, `[Bridge]`, `[Breakdown]`, `[Post-Chorus]`, `[Outro]`, `[Interlude]`, `[Skit]`
 - Number verses in ascending order: `[Verse 1]`, `[Verse 2]`. A single verse, even if repeated, uses `[Verse]`.
 - Parts use ascending Roman numerals: `[Part I]`, `[Part II]`. Named parts use `[Part I: Name]`. Verse numbers continue across parts.
-- `[Instrumental Intro]`, `[Instrumental Outro]` if ~1+ minutes long with no lyrics/dialogue.
+- `[Instrumental Intro]` and `[Instrumental Outro]` may be used for passages with no lyrics or dialogue longer than roughly one minute. Omit these headers for shorter passages.
 
 ## Musixmatch
 
