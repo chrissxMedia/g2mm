@@ -43,7 +43,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 
 - Max 10 lines per section.
 - Capitalize after `?`/`!`.
-- Numbers: digits, except one–ten. Dates, phone numbers, decades (`'60s`), exact times (`4:32`) as digits; `o'clock` spelled out (`Eleven o'clock`).
+- Numbers: digits, except zero through ten. Dates, phone numbers, decades (`'60s`), exact times (`4:32`) as digits; `o'clock` spelled out (`Eleven o'clock`).
 - Punctuation: no trailing `,` or non-acronymized `.`. `?`/`!` in moderation. `…` / `-` only for interruptions and fade-outs.
 - Direct speech after a comma, capitalized: `She said, "Do it like this"`.
 - Background vocals in `(parentheses)`, lowercase unless a pronoun or after punctuation.
