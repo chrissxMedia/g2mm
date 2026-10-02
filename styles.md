@@ -23,6 +23,7 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 - Censored words → asterisks.
 - Sound effects in `*asterisks*` (e.g. `*phone ringing*`).
 - Contractions keep apostrophes. Standardized spellings.
+- Use straight apostrophes and quotation marks.
 
 ### Section headers
 
