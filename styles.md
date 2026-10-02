@@ -49,7 +49,9 @@ Condensed formatting rules for transcribing lyrics in the three target styles.
 - Background vocals in `(parentheses)`, lowercase unless a pronoun or after punctuation.
 - Standardized slang spellings: `Ballin'`, `'Cause`, `Cuz`, `'Em`, `Gon'`/`Gonna`, `I'ma`, `Outta`, `'Til`, `Yo`/`Yo'`.
 
-### Section headers (own line, any combination)
+### Structure tags
+
+Assign tags to the song's sections. Do not put structure or artist labels in the lyric transcription. `#INSTRUMENTAL` uses its own lyric line as described above.
 
 `#INTRO`, `#VERSE`, `#PRE-CHORUS`, `#CHORUS`, `#HOOK`, `#BRIDGE`, `#OUTRO`
 
